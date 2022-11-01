@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Stargazers</string>
+
+    <!-- InputFragment -->
+    <string name="input_fragment_description">GitHub Stargazers</string>
+    <string name="hint_owner">Insert repository owner</string>
+    <string name="hint_repo">Insert repository name</string>
+    <string name="input_fragment_title">Stargazers</string>
+    <string name="stargazers_fragment_title">Stargazers list</string>
+
+    <!-- ERRORS -->
+    <string name="service_error">Ops.. service error.</string>
+    <string name="repo_not_found">No results found, check owner name and repo name.</string>
+    <string name="error_owner">Repository owner should be at least 3 characters.</string>
+    <string name="error_repo_name">Repository name should be at least 3 characters.</string>
+
+    <!-- StargazersFragment -->
+    <string name="stargazers_for">Stargazers for %1s repository by %2s</string>
+    <string name="empty_list">%1s\'s repository %2s has no stargazers yet.</string>
+</resources>

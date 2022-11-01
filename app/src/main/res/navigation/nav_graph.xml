@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inputFragment">
+
+    <!-- FRAGMENTS -->
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="it.hembik.stargazers.ui.input.InputFragment"
+        android:label="@string/input_fragment_title"
+        tools:layout="@layout/fragment_input">
+        <action
+            android:id="@+id/action_inputFragment_to_stargazersFragment"
+            app:destination="@id/stargazersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stargazersFragment"
+        android:label="@string/stargazers_fragment_title"
+        android:name="it.hembik.stargazers.ui.stargazers.StargazersFragment"
+        tools:layout="@layout/fragment_stargazers">
+
+        <argument
+            android:name="owner"
+            app:argType="string" />
+        <argument
+            android:name="repoName"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

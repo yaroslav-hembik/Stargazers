@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/large"
+        android:layout_marginEnd="@dimen/large"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/large">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ownerImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@id/ownerTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="180dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+                tools:background="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/ownerTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ownerImage"
+                tools:text="@tools:sample/full_names" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
